@@ -11,9 +11,11 @@ Files:
 
 Source file (AsciiDoc): [scrum-guide.adoc](scrum-guide.adoc)
 
-Generated HTML: https://scrum-guide.github.io/scrum-guide/scrum-guide.html
+The following files are automatically generated and deployed:
 
-Generated PDF: https://scrum-guide.github.io/scrum-guide/scrum-guide.pdf
+HTML: https://scrum-guide.github.io/scrum-guide/scrum-guide.html
+
+PDF: https://scrum-guide.github.io/scrum-guide/scrum-guide.pdf
 
 
 
