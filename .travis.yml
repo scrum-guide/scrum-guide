@@ -29,3 +29,6 @@ deploy:
   local_dir: output
   on:
     branch: master
+
+notifications:
+  email: false
