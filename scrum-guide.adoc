@@ -561,11 +561,11 @@ potentially releasable functionality that adhere to the Scrum Team’s 
 “Done”.
 
 Development Teams deliver an Increment of product functionality every Sprint. This Increment
-is useable, so a Product Owner may choose to immediately release it. If the definition of “done”
+is useable, so a Product Owner may choose to immediately release it. If the definition of “Done”
 for an increment **is** part of the conventions, standards or guidelines of the development
-organization, all Scrum Teams must follow it as a minimum. If “done” for an increment is **not** a
+organization, all Scrum Teams must follow it as a minimum. If “Done” for an increment is **not** a
 convention of the development organization, the Development Team of the Scrum Team must
-define a definition of “done” appropriate for the product. If there are multiple Scrum Teams
+define a definition of “Done” appropriate for the product. If there are multiple Scrum Teams
 working on the system or product release, the development teams on all of the Scrum Teams
 must mutually define the definition of “Done”.
 
