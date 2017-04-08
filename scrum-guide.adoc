@@ -112,7 +112,7 @@ respect each other to be capable, independent people.
 
 == The Scrum Team
 The Scrum Team consists of a Product Owner, the Development Team, and a Scrum Master.
-Scrum Teams** **are self-organizing and cross-functional. Self-organizing teams choose how best to
+Scrum Teams are self-organizing and cross-functional. Self-organizing teams choose how best to
 accomplish their work, rather than being directed by others outside the team. Cross-functional
 teams have all competencies needed to accomplish the work without depending on others not
 part of the team. The team model in Scrum is designed to optimize flexibility, creativity, and
@@ -257,7 +257,7 @@ predictability by ensuring inspection and adaptation of progress toward�
 every calendar month. Sprints also limit risk to one calendar month of cost.
 
 ==== Cancelling a Sprint
-**A Sprint can be cancelled before the Sprint time-box is over. Only the Product Owner has the
+A Sprint can be cancelled before the Sprint time-box is over. Only the Product Owner has the
 authority to cancel the Sprint, although he or she may do so under influence from the
 stakeholders, the Development Team, or the Scrum Master.
 
