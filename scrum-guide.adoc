@@ -3,7 +3,7 @@ The Scrum Guide
 :doctype: book
 :toc:
 Developed and sustained by Ken Schwaber and Jeff Sutherland
-v2016
+v2016-with-fixes
 July 2016
 
 = The Definitive Guide to Scrum: The Rules of the Game
