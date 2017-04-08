@@ -263,7 +263,7 @@ stakeholders, the Development Team, or the Scrum Master.
 
 A Sprint would be cancelled if the Sprint Goal becomes obsolete. This might occur if the
 company changes direction or if market or technology conditions change. In general, a Sprint
-should be cancelled if it no longer makes sense given the circumstances. But, due to th e short
+should be cancelled if it no longer makes sense given the circumstances. But, due to the short
 duration of Sprints, cancellation rarely makes sense.
 
 When a Sprint is cancelled, any completed and “Done” Product Backlog items are reviewed. If
