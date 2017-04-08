@@ -194,7 +194,6 @@ outside the Scrum Team understand which of their interactions with the
 and which aren’t. The Scrum Master helps everyone change these interactions to maximize the
 value created by the Scrum Team.
 
-
 ==== Scrum Master Service to the Product Owner
 The Scrum Master serves the Product Owner in several ways, including:
 
@@ -381,8 +380,8 @@ Daily Scrum.
 Daily Scrums improve communications, eliminate other meetings, identify impediments to
 development for removal, highlight and promote quick decision-making, and improve the
 Development Team’s level of knowledge. This is a key inspect and adapt meeting.
- 
-===Sprint Review
+
+=== Sprint Review
 A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product
 Backlog if needed. During the Sprint Review, the Scrum Team and stakeholders collaborate
 about what was done in the Sprint. Based on that and any changes to the Product Backlog
@@ -505,9 +504,8 @@ Various projective practices upon trending have been used to forecast 
 downs, burn-ups, or cumulative flows. These have proven useful. However, these do not replace
 the importance of empiricism. In complex environments, what will happen is unknown. Only
 what has happened may be used for forward-looking decision-making.
- 
 
-==== Sprint Backlog
+=== Sprint Backlog
 The Sprint Backlog is the set of Product Backlog items selected for the Sprint, plus a plan for
 delivering the product Increment and realizing the Sprint Goal. The Sprint Backlog is a forecast
 by the Development Team about what functionality will be in the next Increment and the work
@@ -528,18 +526,19 @@ Backlog during a Sprint. The Sprint Backlog is a highly visible, real
 the Development Team plans to accomplish during the Sprint, and it belongs solely to the
 Development Team.
 
-===== Monitoring Sprint Progress
+==== Monitoring Sprint Progress
 At any point in time in a Sprint, the total work remaining in the Sprint Backlog can be summed.
 The Development Team tracks this total work remaining at least for every Daily Scrum to project
 the likelihood of achieving the Sprint Goal. By tracking the remaining work throughout the
 Sprint, the Development Team can manage its progress.
 
-==== Increment
+=== Increment
 The Increment is the sum of all the Product Backlog items completed during a Sprint and the
 value of the increments of all previous Sprints. At the end of a Sprint, the new Increment must
 be “Done,” which means it must be in useable condition and meet the Scrum Team’s definition
 of “Done.” It must be in useable condition regardless of whether the Product Owner decides to
 actually release it.
+
 
 == Artifact  Transparency
 Scrum relies on transparency. Decisions to optimize value and control risk are made based on
