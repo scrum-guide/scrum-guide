@@ -528,7 +528,7 @@ Sprint, the Development Team can manage its progress.
 The Increment is the sum of all the Product Backlog items completed during a Sprint and the
 value of the increments of all previous Sprints. At the end of a Sprint, the new Increment must
 be “Done,” which means it must be in useable condition and meet the Scrum Team’s definition
-of “Done.” It must be in useable condition regardless of whether the Product Owner decides to
+of “Done”. It must be in useable condition regardless of whether the Product Owner decides to
 actually release it.
 
 == Artifact  Transparency
@@ -558,7 +558,7 @@ work is complete on the product Increment.
 The same definition guides the Development Team in knowing how many Product Backlog items
 it can select during a Sprint Planning. The purpose of each Sprint is to deliver Increments of
 potentially releasable functionality that adhere to the Scrum Team’s current definition of
-“Done.”
+“Done”.
 
 Development Teams deliver an Increment of product functionality every Sprint. This Increment
 is useable, so a Product Owner may choose to immediately release it. If the definition of “done”
@@ -567,7 +567,7 @@ organization, all Scrum Teams must follow it as a minimum. If “done
 convention of the development organization, the Development Team of the Scrum Team must
 define a definition of “done” appropriate for the product. If there are multiple Scrum Teams
 working on the system or product release, the development teams on all of the Scrum Teams
-must mutually define the definition of “Done.”
+must mutually define the definition of “Done”.
 
 Each Increment is additive to all prior Increments and thoroughly tested, ensuring that all
 Increments work together.
