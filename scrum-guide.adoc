@@ -1,5 +1,7 @@
 The Scrum Guide
 ===============
+:doctype: book
+:toc:
 Developed and sustained by Ken Schwaber and Jeff Sutherland
 v2016
 July 2016
@@ -7,8 +9,9 @@ July 2016
 = The Definitive Guide to Scrum: The Rules of the Game
 
 [preface]
+== License
 ©2016 Scrum.Org and ScrumInc.
-Offered for license  under the Attribution Share-Alike license of Creative Commons,
+Offered for license under the Attribution Share-Alike license of Creative Commons,
 accessible at
 http://creativecommons.org/licenses/by-sa/4.0/legalcode
 and
