@@ -16,5 +16,14 @@ HTML: https://scrum-guide.github.io/scrum-guide/scrum-guide.html
 PDF: https://scrum-guide.github.io/scrum-guide/scrum-guide.pdf
 
 
+## Scrum Guide - German 
+
+Source file (AsciiDoc): [scrum-guide_de.adoc](scrum-guide_de.adoc)
+
+The following files are automatically generated and deployed:
+
+HTML: https://scrum-guide.github.io/scrum-guide/scrum-guide_de.html
+
+PDF: https://scrum-guide.github.io/scrum-guide/scrum-guide_de.pdf
 
 
