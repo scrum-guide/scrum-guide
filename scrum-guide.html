@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="author" content="Developed and sustained by Ken Schwaber and Jeff Sutherland">
+<title>The Scrum Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.no-bullet{list-style:none}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menu{color:rgba(0,0,0,.8)}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#content{margin-top:1.25em}
+#content:before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+.sect1{padding-bottom:.625em}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
+table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
+table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
+table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot{border-width:1px 0}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
+ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:last-of-type{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span:before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>The Scrum Guide</h1>
+<div class="details">
+<span id="author" class="author">Developed and sustained by Ken Schwaber and Jeff Sutherland</span><br>
+<span id="revnumber">version 2016-with-fixes</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel0">
+<li><a href="#_the_definitive_guide_to_scrum_the_rules_of_the_game">The Definitive Guide to Scrum: The Rules of the Game</a>
+<ul class="sectlevel1">
+<li><a href="#_license">License</a></li>
+<li><a href="#_purpose_of_the_scrum_guide">Purpose of the Scrum Guide</a></li>
+<li><a href="#_definition_of_scrum">Definition  of Scrum</a></li>
+<li><a href="#_scrum_theory">Scrum Theory</a>
+<ul class="sectlevel2">
+<li><a href="#_transparency">Transparency</a></li>
+<li><a href="#_inspection">Inspection</a></li>
+<li><a href="#_adaptation">Adaptation</a></li>
+</ul>
+</li>
+<li><a href="#_scrum_values">Scrum Values</a></li>
+<li><a href="#_the_scrum_team">The Scrum Team</a>
+<ul class="sectlevel2">
+<li><a href="#_the_product_owner">The Product Owner</a></li>
+<li><a href="#_the_development_team">The Development Team</a></li>
+<li><a href="#_the_scrum_master">The Scrum Master</a></li>
+</ul>
+</li>
+<li><a href="#_scrum_events">Scrum Events</a>
+<ul class="sectlevel2">
+<li><a href="#_the_sprint">The Sprint</a></li>
+<li><a href="#_sprint_planning">Sprint Planning</a></li>
+<li><a href="#_daily_scrum">Daily Scrum</a></li>
+<li><a href="#_sprint_review">Sprint Review</a></li>
+<li><a href="#_sprint_retrospective">Sprint Retrospective</a></li>
+</ul>
+</li>
+<li><a href="#_scrum_artifacts">Scrum Artifacts</a>
+<ul class="sectlevel2">
+<li><a href="#_product_backlog">Product Backlog</a></li>
+<li><a href="#_sprint_backlog">Sprint Backlog</a></li>
+<li><a href="#_increment">Increment</a></li>
+</ul>
+</li>
+<li><a href="#_artifact_transparency">Artifact  Transparency</a>
+<ul class="sectlevel2">
+<li><a href="#_definition_of_done">Definition of “Done”</a></li>
+</ul>
+</li>
+<li><a href="#_end_note">End Note</a></li>
+<li><a href="#_acknowledgements">Acknowledgements</a>
+<ul class="sectlevel2">
+<li><a href="#_people">People</a></li>
+<li><a href="#_history">History</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>July 2016</p>
+</div>
+</div>
+</div>
+<h1 id="_the_definitive_guide_to_scrum_the_rules_of_the_game" class="sect0">The Definitive Guide to Scrum: The Rules of the Game</h1>
+<div class="sect1">
+<h2 id="_license">License</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>©2016 Scrum.Org and ScrumInc.
+Offered for license under the Attribution Share-Alike license of Creative Commons,
+accessible at
+<a href="http://creativecommons.org/licenses/by-sa/4.0/legalcode" class="bare">http://creativecommons.org/licenses/by-sa/4.0/legalcode</a>
+and also described in summary form at
+<a href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</a>.
+By utilizing this Scrum Guide you acknowledge and
+agree that you have read and agree to be bound by the terms of
+the Attribution Share-Alike license of Creative Commons.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_purpose_of_the_scrum_guide">Purpose of the Scrum Guide</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scrum is a framework for developing and sustaining complex products. This Guide contains the
+definition of Scrum. This definition consists of Scrum’s roles, events, artifacts, and the rules that
+bind them together. Ken Schwaber and Jeff Sutherland developed Scrum; the Scrum Guide is
+written and provided by them. Together, they stand behind the Scrum Guide.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_definition_of_scrum">Definition  of Scrum</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scrum (n): A framework within which people can address complex adaptive problems, while
+productively and creatively delivering products of the highest possible value.</p>
+</div>
+<div class="paragraph">
+<p>Scrum is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lightweight</p>
+</li>
+<li>
+<p>Simple to understand</p>
+</li>
+<li>
+<p>Difficult to master</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Scrum is a process framework that has been used to manage complex product development
+since the early 1990s. Scrum is not a process or a technique for building products; rather, it is a
+framework within which you can employ various processes and techniques. Scrum makes clear
+the relative efficacy of your product management and development practices so that you can
+improve.</p>
+</div>
+<div class="paragraph">
+<p>The Scrum framework consists of Scrum Teams and their associated roles, events, artifacts, and
+rules. Each component within the framework serves a specific purpose and is essential to
+Scrum’s success and usage.</p>
+</div>
+<div class="paragraph">
+<p>The rules of Scrum bind together the events, roles, and artifacts, governing the relationships and
+interaction between them. The rules of Scrum are described throughout the body of this
+document.</p>
+</div>
+<div class="paragraph">
+<p>Specific tactics for using the Scrum framework vary and are described elsewhere.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scrum_theory">Scrum Theory</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scrum is founded on empirical process control theory, or empiricism. Empiricism asserts that
+knowledge comes from experience <em>and</em> making decisions based on what is known. Scrum
+employs an iterative, incremental approach to optimize predictability and control risk.</p>
+</div>
+<div class="paragraph">
+<p>Three pillars uphold every implementation of empirical process control: transparency,
+inspection, and adaptation.</p>
+</div>
+<div class="sect2">
+<h3 id="_transparency">Transparency</h3>
+<div class="paragraph">
+<p>Significant aspects of the process must be visible to those responsible for the outcome.
+Transparency requires those aspects be defined by a common standard so observers share a
+common understanding of what is being seen.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A common language referring to the process must be shared by all participants; and,</p>
+</li>
+<li>
+<p>Those performing the work and those accepting the work product must share a common  definition of “Done”.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inspection">Inspection</h3>
+<div class="paragraph">
+<p>Scrum users must frequently inspect Scrum artifacts and progress toward a Sprint Goal to detect
+undesirable variances. Their inspection should not be so frequent that inspection gets in the way
+of the work. Inspections are most beneficial when diligently performed by skilled inspectors at
+the point of work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adaptation">Adaptation</h3>
+<div class="paragraph">
+<p>If an inspector determines that one or more aspects of a process deviate outside acceptable
+limits, and that the resulting product will be unacceptable, the process or the material being
+processed must be adjusted. An adjustment must be made as soon as possible to minimize
+further deviation.</p>
+</div>
+<div class="paragraph">
+<p>Scrum prescribes four formal events for inspection and adaptation, as described in the <em>Scrum
+Events</em> section of this document:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sprint Planning</p>
+</li>
+<li>
+<p>Daily Scrum</p>
+</li>
+<li>
+<p>Sprint Review</p>
+</li>
+<li>
+<p>Sprint Retrospective</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scrum_values">Scrum Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When the values of commitment, courage, focus, openness and respect are embodied and lived
+by the Scrum Team, the Scrum pillars of transparency, inspection, and adaptation come to life
+and build trust for everyone. The Scrum Team members learn and explore those values as they
+work with the Scrum events, roles and artifacts.</p>
+</div>
+<div class="paragraph">
+<p>Successful use of Scrum depends on people becoming more proficient in living the se five values.
+People personally commit to achieving the goals of the Scrum Team. The Scrum Team members
+have courage to do the right thing and work on tough problems. Everyone focuses on the work
+of the Sprint and the goals of the Scrum Team. The Scrum Team and its stakeholders agree to be
+open about all the work and the challenges with performing the work. Scrum Team members
+respect each other to be capable, independent people.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_scrum_team">The Scrum Team</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Scrum Team consists of a Product Owner, the Development Team, and a Scrum Master.
+Scrum Teams are self-organizing and cross-functional. Self-organizing teams choose how best to
+accomplish their work, rather than being directed by others outside the team. Cross-functional
+teams have all competencies needed to accomplish the work without depending on others not
+part of the team. The team model in Scrum is designed to optimize flexibility, creativity, and
+productivity.</p>
+</div>
+<div class="paragraph">
+<p>Scrum Teams deliver products iteratively and incrementally, maximizing opportunities for
+feedback. Incremental deliveries of “Done” product ensure a potentially useful version of
+working product is always available.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_product_owner">The Product Owner</h3>
+<div class="paragraph">
+<p>The Product Owner is responsible for maximizing the value of the product and the work of the
+Development Team. How this is done may vary widely across organizations, Scrum Teams, and
+individuals.</p>
+</div>
+<div class="paragraph">
+<p>The Product Owner is the sole person responsible for managing the Product Backlog. Product
+Backlog management includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clearly expressing Product Backlog items;</p>
+</li>
+<li>
+<p>Ordering the items in the Product Backlog to best achieve goals and missions;</p>
+</li>
+<li>
+<p>Optimizing the value of the work the Development Team performs;</p>
+</li>
+<li>
+<p>Ensuring that the Product Backlog is visible, transparent, and clear to all, and shows what
+the Scrum Team will work on next; and,</p>
+</li>
+<li>
+<p>Ensuring the Development Team understands items in the Product Backlog to the level needed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Product Owner may do the above work, or have the Development Team do it. However, the
+Product Owner remains accountable.</p>
+</div>
+<div class="paragraph">
+<p>The Product Owner is one person, not a committee. The Product Owner may represent the
+desires of a committee in the Product Backlog, but those wanting to change a Product Backlog
+item’s priority must address the Product Owner.</p>
+</div>
+<div class="paragraph">
+<p>For the Product Owner to succeed, the entire organization must respect his or her decisions. The
+Product Owner’s decisions are visible in the content and ordering of the Product Backlog. No
+one is allowed to tell the Development Team to work from a different set of requirements, and
+the Development Team isn’t allowed to act on what anyone else says.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_development_team">The Development Team</h3>
+<div class="paragraph">
+<p>The Development Team consists of professionals who do the work of delivering a potentially
+releasable Increment of “Done” product at the end of each Sprint. Only members of the
+Development Team create the Increment.</p>
+</div>
+<div class="paragraph">
+<p>Development Teams are structured and empowered by the organization to organize and
+manage their own work. The resulting synergy optimizes the Development Team’s overall
+efficiency and effectiveness.</p>
+</div>
+<div class="paragraph">
+<p>Development Teams have the following characteristics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They are self-organizing. No one (not even the Scrum Master) tells the Development Team
+how to turn Product Backlog into Increments of potentially releasable functionality;</p>
+</li>
+<li>
+<p>Development Teams are cross-functional, with all of the skills as a team necessary to create a product Increment;</p>
+</li>
+<li>
+<p>Scrum recognizes no titles for Development Team members other than Developer,
+regardless of the work being performed by the person; there are no exceptions to this rule;</p>
+</li>
+<li>
+<p>Scrum recognizes no sub-teams in the Development Team, regardless of particular domains
+that need to be addressed like testing or business analysis; there are no exceptions to this
+rule; and,</p>
+</li>
+<li>
+<p>Individual Development Team members may have specialized skills and areas of focus, but
+accountability belongs to the Development Team as a whole.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_development_team_size">Development Team Size</h4>
+<div class="paragraph">
+<p>Optimal Development Team size is small enough to remain nimble and large enough to
+complete significant work within a Sprint. Fewer than three Development Team members
+decrease interaction and results in smaller productivity gains. Smaller Development Teams may
+encounter skill constraints during the Sprint, causing the Development Team to be unable to
+deliver a potentially releasable Increment. Having more than nine members requires too much
+coordination. Large Development Teams generate too much complexity for an empirical process
+to manage. The Product Owner and Scrum Master roles are not included in this count unless
+they are also executing the work of the Sprint Backlog.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_scrum_master">The Scrum Master</h3>
+<div class="paragraph">
+<p>The Scrum Master is responsible for ensuring Scrum is understood and enacted. Scrum Masters
+do this by ensuring that the Scrum Team adheres to Scrum theory, practices, and rules.</p>
+</div>
+<div class="paragraph">
+<p>The Scrum Master is a servant-leader for the Scrum Team. The Scrum Master helps those
+outside the Scrum Team understand which of their interactions with the Scrum Team are helpful
+and which aren’t. The Scrum Master helps everyone change these interactions to maximize the
+value created by the Scrum Team.</p>
+</div>
+<div class="sect3">
+<h4 id="_scrum_master_service_to_the_product_owner">Scrum Master Service to the Product Owner</h4>
+<div class="paragraph">
+<p>The Scrum Master serves the Product Owner in several ways, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Finding techniques for effective Product Backlog management;</p>
+</li>
+<li>
+<p>Helping the Scrum Team understand the need for clear and concise Product Backlog items;</p>
+</li>
+<li>
+<p>Understanding product planning in an empirical environment;</p>
+</li>
+<li>
+<p>Ensuring the Product Owner knows how to arrange the Product Backlog to maximize value;</p>
+</li>
+<li>
+<p>Understanding and practicing agility; and,</p>
+</li>
+<li>
+<p>Facilitating Scrum events as requested or needed.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_scrum_master_service_to_the_development_team">Scrum Master Service to the Development Team</h4>
+<div class="paragraph">
+<p>The Scrum Master serves the Development Team in several ways, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Coaching the Development Team in self-organization and cross-functionality;</p>
+</li>
+<li>
+<p>Helping the Development Team to create high-value products;</p>
+</li>
+<li>
+<p>Removing impediments to the Development Team’s progress;</p>
+</li>
+<li>
+<p>Facilitating Scrum events as requested or needed; and,</p>
+</li>
+<li>
+<p>Coaching the Development Team in organizational environments in which Scrum is not yet
+fully adopted and understood.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_scrum_master_service_to_the_organization">Scrum Master Service to the Organization</h4>
+<div class="paragraph">
+<p>The Scrum Master serves the organization in several ways, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Leading and coaching the organization in its Scrum adoption;</p>
+</li>
+<li>
+<p>Planning Scrum implementations within the organization;</p>
+</li>
+<li>
+<p>Helping employees and stakeholders understand and enact Scrum and empirical product development;</p>
+</li>
+<li>
+<p>Causing change that increases the productivity of the Scrum Team; and,</p>
+</li>
+<li>
+<p>Working with other Scrum Masters to increase the effectiveness of the application of Scrum  in the organization.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scrum_events">Scrum Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Prescribed events are used in Scrum to create regularity and to minimize the need for meetings
+not defined in Scrum. All events are time-boxed events, such that every event has a maximum
+duration. Once a Sprint begins, its duration is fixed and cannot be shortened or lengthened. The
+remaining events may end whenever the purpose of the event is achieved, ensuring an
+appropriate amount of time is spent without allowing waste in the process.</p>
+</div>
+<div class="paragraph">
+<p>Other than the Sprint itself, which is a container for all other events, each event in Scrum is a
+formal opportunity to inspect and adapt something. These events are specifically designed to
+enable critical transparency and inspection. Failure to include any of these events results in
+reduced transparency and is a lost opportunity to inspect and adapt.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_sprint">The Sprint</h3>
+<div class="paragraph">
+<p>The heart of Scrum is a Sprint, a time-box of one month or less during which a “Done”, useable,
+and potentially releasable product Increment is created. Sprints best have consistent durations
+throughout a development effort. A new Sprint starts immediately after the conclusion of the
+previous Sprint.</p>
+</div>
+<div class="paragraph">
+<p>Sprints contain and consist of the Sprint Planning, Daily Scrums, the development work, the
+Sprint Review, and the Sprint Retrospective.</p>
+</div>
+<div class="paragraph">
+<p>During the Sprint:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No changes are made that would endanger the Sprint Goal;</p>
+</li>
+<li>
+<p>Quality goals do not decrease; and,</p>
+</li>
+<li>
+<p>Scope may be clarified and re-negotiated between the Product Owner and Development  Team as more is learned.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each Sprint may be considered a project with no more than a one-month horizon. Like projects,
+Sprints are used to accomplish something. Each Sprint has a definition of what is to be built, a
+design and flexible plan that will guide building it, the work, and the resultant product.</p>
+</div>
+<div class="paragraph">
+<p>Sprints are limited to one calendar month. When a Sprint’s horizon is too long the definition of
+what is being built may change, complexity may rise, and risk may increase. Sprints enable
+predictability by ensuring inspection and adaptation of progress toward a Sprint Goal at least
+every calendar month. Sprints also limit risk to one calendar month of cost.</p>
+</div>
+<div class="sect3">
+<h4 id="_cancelling_a_sprint">Cancelling a Sprint</h4>
+<div class="paragraph">
+<p>A Sprint can be cancelled before the Sprint time-box is over. Only the Product Owner has the
+authority to cancel the Sprint, although he or she may do so under influence from the
+stakeholders, the Development Team, or the Scrum Master.</p>
+</div>
+<div class="paragraph">
+<p>A Sprint would be cancelled if the Sprint Goal becomes obsolete. This might occur if the
+company changes direction or if market or technology conditions change. In general, a Sprint
+should be cancelled if it no longer makes sense given the circumstances. But, due to th e short
+duration of Sprints, cancellation rarely makes sense.</p>
+</div>
+<div class="paragraph">
+<p>When a Sprint is cancelled, any completed and “Done” Product Backlog items are reviewed. If
+part of the work is potentially releasable, the Product Owner typically accepts it. All incomplete
+Product Backlog Items are re-estimated and put back on the Product Backlog. The work done on
+them depreciates quickly and must be frequently re-estimated.</p>
+</div>
+<div class="paragraph">
+<p>Sprint cancellations consume resources, since everyone has to regroup in another Sprint
+Planning to start another Sprint. Sprint cancellations are often traumatic to the Scrum Team,
+and are very uncommon.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sprint_planning">Sprint Planning</h3>
+<div class="paragraph">
+<p>The work to be performed in the Sprint is planned at the Sprint Planning. This plan is created by
+the collaborative work of the entire Scrum Team.</p>
+</div>
+<div class="paragraph">
+<p>Sprint Planning is time-boxed to a maximum of eight hours for a one-month Sprint. For shorter
+Sprints, the event is usually shorter. The Scrum Master ensures that the event takes place and
+that attendants understand its purpose. The Scrum Master teaches the Scrum Team to keep it
+within the time-box.</p>
+</div>
+<div class="paragraph">
+<p>Sprint Planning answers the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What can be delivered in the Increment resulting from the upcoming Sprint?</p>
+</li>
+<li>
+<p>How will the work needed to deliver the Increment be achieved?</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_topic_one_what_can_be_done_this_sprint">Topic One: What can be done this Sprint?</h4>
+<div class="paragraph">
+<p>The Development Team works to forecast the functionality that will be developed during the
+Sprint. The Product Owner discusses the objective that the Sprint should achieve and the
+Product Backlog items that, if completed in the Sprint, would achieve the Sprint Goal. The entire
+Scrum Team collaborates on understanding the work of the Sprint.</p>
+</div>
+<div class="paragraph">
+<p>The input to this meeting is the Product Backlog, the latest product Increment, projected
+capacity of the Development Team during the Sprint, and past performance of the Development
+Team. The number of items selected from the Product Backlog for the Sprint is solely up to the
+Development Team. Only the Development Team can assess what it can accomplish over the
+upcoming Sprint.</p>
+</div>
+<div class="paragraph">
+<p>After the Development Team forecasts the Product Backlog items it will deliver in the Sprint, the
+Scrum Team crafts a Sprint Goal. The Sprint Goal is an objective that will be met within the
+Sprint through the implementation of the Product Backlog, and it provides guidance to the
+Development Team on why it is building the Increment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_topic_two_how_will_the_chosen_work_get_done">Topic Two: How will the chosen work get done?</h4>
+<div class="paragraph">
+<p>Having set the Sprint Goal and selected the Product Backlog items for the Sprint, the
+Development Team decides how it will build this functionality into a “Done” product Increment
+during the Sprint. The Product Backlog items selected for this Sprint plus the plan for delivering
+them is called the Sprint Backlog.</p>
+</div>
+<div class="paragraph">
+<p>The Development Team usually starts by designing the system and the work needed to convert
+the Product Backlog into a working product Increment. Work may be of varying size, or
+estimated effort. However, enough work is planned during Sprint Planning for the Development
+Team to forecast what it believes it can do in the upcoming Sprint. Work planned for the first
+days of the Sprint by the Development Team is decomposed by the end of this meeting, often to
+units of one day or less. The Development Team self-organizes to undertake the work in the
+Sprint Backlog, both during Sprint Planning and as needed throughout the Sprint.</p>
+</div>
+<div class="paragraph">
+<p>The Product Owner can help to clarify the selected Product Backlog items and make trade-offs.
+If the Development Team determines it has too much or too little work, it may renegotiate the
+selected Product Backlog items with the Product Owner. The Development Team may also invite
+other people to attend in order to provide technical or domain advice.</p>
+</div>
+<div class="paragraph">
+<p>By the end of the Sprint Planning, the Development Team should be able to explain to the
+Product Owner and Scrum Master how it intends to work as a self-organizing team to
+accomplish the Sprint Goal and create the anticipated Increment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sprint_goal">Sprint Goal</h4>
+<div class="paragraph">
+<p>The Sprint Goal is an objective set for the Sprint that can be met through the implementation of
+Product Backlog. It provides guidance to the Development Team on why it is building the
+Increment. It is created during the Sprint Planning meeting. The Sprint Goal gives the
+Development Team some flexibility regarding the functionality implemented within the Sprint.
+The selected Product Backlog items deliver one coherent function, which can be the  Sprint Goal.
+The Sprint Goal can be any other coherence that causes the Development Team to work
+together rather than on separate initiatives.
+ 
+As the Development Team works, it keeps the Sprint Goal in mind. In order to satisfy the Sprint
+Goal, it implements the functionality and technology. If the work turns out to be different than
+the Development Team expected, they collaborate with the Product Owner to negotiate the
+scope of Sprint Backlog within the Sprint.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_daily_scrum">Daily Scrum</h3>
+<div class="paragraph">
+<p>The Daily Scrum is a 15-minute time-boxed event for the Development Team to synchronize
+activities and create a plan for the next 24 hours. This is done by inspecting the work since the
+last Daily Scrum and forecasting the work that could be done before the next one.</p>
+</div>
+<div class="paragraph">
+<p>The Daily Scrum is held at the same time and place each day to reduce complexity. During the
+meeting, the Development Team members explain:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What did I do yesterday that helped the Development Team meet the Sprint Goal?</p>
+</li>
+<li>
+<p>What will I do today to help the Development Team meet the Sprint Goal?</p>
+</li>
+<li>
+<p>Do I see any impediment that prevents me or the Development Team from meeting the  Sprint Goal?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Development Team uses the Daily Scrum to inspect progress toward the Sprint Goal and to
+inspect how progress is trending toward completing the work in the Sprint Backlog. The Daily
+Scrum optimizes the probability that the Development Team will meet the Sprint Goal. Every
+day, the Development Team should understand how it intends to work together as a self-
+organizing team to accomplish the Sprint Goal and create the anticipated Increment by the end
+of the Sprint. The Development Team or team members often meet immediately after the Daily
+Scrum for detailed discussions, or to adapt, or replan, the rest of the Sprint’s work.</p>
+</div>
+<div class="paragraph">
+<p>The Scrum Master ensures that the Development Team has the meeting, but the Development
+Team is responsible for conducting the Daily Scrum. The Scrum Master teaches the
+Development Team to keep the Daily Scrum within the 15-minute time-box.</p>
+</div>
+<div class="paragraph">
+<p>The Scrum Master enforces the rule that only Development Team members participate in the
+Daily Scrum.</p>
+</div>
+<div class="paragraph">
+<p>Daily Scrums improve communications, eliminate other meetings, identify impediments to
+development for removal, highlight and promote quick decision-making, and improve the
+Development Team’s level of knowledge. This is a key inspect and adapt meeting.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sprint_review">Sprint Review</h3>
+<div class="paragraph">
+<p>A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product
+Backlog if needed. During the Sprint Review, the Scrum Team and stakeholders collaborate
+about what was done in the Sprint. Based on that and any changes to the Product Backlog
+during the Sprint, attendees collaborate on the next things that coul d be done to optimize value.
+This is an informal meeting, not a status meeting, and the presentation of the Increment is
+intended to elicit feedback and foster collaboration.</p>
+</div>
+<div class="paragraph">
+<p>This is a four-hour time-boxed meeting for one-month Sprints. For shorter Sprints, the event is
+usually shorter. The Scrum Master ensures that the event takes place and that attendants
+understand its purpose. The Scrum Master teaches all to keep it within the time -box.</p>
+</div>
+<div class="paragraph">
+<p>The Sprint Review includes the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Attendees include the Scrum Team and key stakeholders invited by the Product Owner;</p>
+</li>
+<li>
+<p>The Product Owner explains what Product Backlog items have been “Done” and what has
+not been “Done”;</p>
+</li>
+<li>
+<p>The Development Team discusses what went well during the Sprint, what problems it ran
+into, and how those problems were solved;</p>
+</li>
+<li>
+<p>The Development Team demonstrates the work that it has “Done” and answers questions
+about the Increment;</p>
+</li>
+<li>
+<p>The Product Owner discusses the Product Backlog as it stands. He or she projects likely
+completion dates based on progress to date (if needed);</p>
+</li>
+<li>
+<p>The entire group collaborates on what to do next, so that the Sprint Review provides
+valuable input to subsequent Sprint Planning;</p>
+</li>
+<li>
+<p>Review of how the marketplace or potential use of the product might have changed what is
+the most valuable thing to do next; and,</p>
+</li>
+<li>
+<p>Review of the timeline, budget, potential capabilities, and marketplace for the next
+anticipated release of the product.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The result of the Sprint Review is a revised Product Backlog that defines the probable Product
+Backlog items for the next Sprint. The Product Backlog may also be adjusted overall to meet new
+opportunities.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sprint_retrospective">Sprint Retrospective</h3>
+<div class="paragraph">
+<p>The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan
+for improvements to be enacted during the next Sprint.</p>
+</div>
+<div class="paragraph">
+<p>The Sprint Retrospective occurs after the Sprint Review and prior to the next Sprint Planning.
+This is a three-hour time-boxed meeting for one-month Sprints. For shorter Sprints, the event is
+usually shorter. The Scrum Master ensures that the event takes place and that attendants
+understand its purpose. The Scrum Master teaches all to keep it within the time -box. The Scrum
+Master participates as a peer team member in the meeting from the accountability over the
+Scrum process.</p>
+</div>
+<div class="paragraph">
+<p>The purpose of the Sprint Retrospective is to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Inspect how the last Sprint went with regards to people, relationships, process, and tools;</p>
+</li>
+<li>
+<p>Identify and order the major items that went well and potential improvements; and,</p>
+</li>
+<li>
+<p>Create a plan for implementing improvements to the way the Scrum Team does its work.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Scrum Master encourages the Scrum Team to improve, within the Scrum process
+framework, its development process and practices to make it more effective and enjoyable for
+the next Sprint. During each Sprint Retrospective, the Scrum Team plans ways to increase
+product quality by adapting the definition of “Done” as appropriate.</p>
+</div>
+<div class="paragraph">
+<p>By the end of the Sprint Retrospective, the Scrum Team should have identified improvements
+that it will implement in the next Sprint. Implementing these improvements in the next Sprint is
+the adaptation to the inspection of the Scrum Team itself. Although improvements may be
+implemented at any time, the Sprint Retrospective provides a formal opportunity to focus on
+inspection and adaptation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scrum_artifacts">Scrum Artifacts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scrum’s artifacts represent work or value to provide transparency and opportunities for
+inspection and adaptation. Artifacts defined by Scrum are specifically designed to maximize
+transparency of key information so that everybody has the same understanding of the artifact.</p>
+</div>
+<div class="sect2">
+<h3 id="_product_backlog">Product Backlog</h3>
+<div class="paragraph">
+<p>The Product Backlog is an ordered list of everything that might be needed in the product and is
+the single source of requirements for any changes to be made to the product. The Product
+Owner is responsible for the Product Backlog, including its content, availability, and ordering.</p>
+</div>
+<div class="paragraph">
+<p>A Product Backlog is never complete. The earliest development of it only lays out the initially
+known and best-understood requirements. The Product Backlog evolves as the product and the
+environment in which it will be used evolves. The Product Backlog is dynamic; it constantly
+changes to identify what the product needs to be appropriate, competitive, and useful. As long
+as a product exists, its Product Backlog also exists.</p>
+</div>
+<div class="paragraph">
+<p>The Product Backlog lists all features, functions, requirements, enhancements, and fixes that
+constitute the changes to be made to the product in future releases. Product Backlog items have
+the attributes of a description, order, estimate and value.</p>
+</div>
+<div class="paragraph">
+<p>As a product is used and gains value, and the marketplace provides feedback, the Product
+Backlog becomes a larger and more exhaustive list. Requirements never stop changing, so a
+Product Backlog is a living artifact. Changes in business requirements, market conditions, or
+technology may cause changes in the Product Backlog.</p>
+</div>
+<div class="paragraph">
+<p>Multiple Scrum Teams often work together on the same product. One Product Backlog is  used
+to describe the upcoming work on the product. A Product Backlog attribute that groups items
+may then be employed.</p>
+</div>
+<div class="paragraph">
+<p>Product Backlog refinement is the act of adding detail, estimates, and order to items in the
+Product Backlog. This is an ongoing process in which the Product Owner and the Development
+Team collaborate on the details of Product Backlog items. During Product Backlog refinement,
+items are reviewed and revised. The Scrum Team decides how and when refinement is done.
+Refinement usually consumes no more than 10% of the capacity of the Development Team.
+However, Product Backlog items can be updated at any time by the Product Owner or at the
+Product Owner’s discretion.</p>
+</div>
+<div class="paragraph">
+<p>Higher ordered Product Backlog items are usually clearer and more detailed than lower ordered
+ones. More precise estimates are made based on the greater clarity and increased detail; the
+lower the order, the less detail. Product Backlog items that will occupy the Development Team
+for the upcoming Sprint are refined so that any one item can reasonably be “Done” within the
+Sprint time-box. Product Backlog items that can be “Done” by the Development Team within
+one Sprint are deemed “Ready” for selection in a Sprint Planning. Product Backlog items usually
+acquire this degree of transparency through the above described refining activities.</p>
+</div>
+<div class="paragraph">
+<p>The Development Team is responsible for all estimates. The Product Owner may influence the
+Development Team by helping it understand and select trade-offs, but the people who will
+perform the work make the final estimate.</p>
+</div>
+<div class="sect3">
+<h4 id="_monitoring_progress_toward_a_goal">Monitoring Progress Toward a Goal</h4>
+<div class="paragraph">
+<p>At any point in time, the total work remaining to reach a goal can be summed. The Product
+Owner tracks this total work remaining at least every Sprint Review. The Product Owner
+compares this amount with work remaining at previous Sprint Reviews to assess progress
+toward completing projected work by the desired time for the goal . This information is made
+transparent to all stakeholders.</p>
+</div>
+<div class="paragraph">
+<p>Various projective practices upon trending have been used to forecast progress, like burn-
+downs, burn-ups, or cumulative flows. These have proven useful. However, these do not replace
+the importance of empiricism. In complex environments, what will happen is unknown. Only
+what has happened may be used for forward-looking decision-making.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sprint_backlog">Sprint Backlog</h3>
+<div class="paragraph">
+<p>The Sprint Backlog is the set of Product Backlog items selected for the Sprint, plus a plan for
+delivering the product Increment and realizing the Sprint Goal. The Sprint Backlog is a forecast
+by the Development Team about what functionality will be in the next Increment and the work
+needed to deliver that functionality into a “Done” Increment.</p>
+</div>
+<div class="paragraph">
+<p>The Sprint Backlog makes visible all of the work that the Development Team identifies as
+necessary to meet the Sprint Goal.</p>
+</div>
+<div class="paragraph">
+<p>The Sprint Backlog is a plan with enough detail that changes in progress can be understood in
+the Daily Scrum. The Development Team modifies the Sprint Backlog throughout the Sprint, and
+the Sprint Backlog emerges during the Sprint. This emergence occurs as the Development Team
+works through the plan and learns more about the work needed to achieve the Sprint Goal.</p>
+</div>
+<div class="paragraph">
+<p>As new work is required, the Development Team adds it to the Sprint Backlog. As work is
+performed or completed, the estimated remaining work is updated. When elements of the plan
+are deemed unnecessary, they are removed. Only the Development Team can change its Sprint
+Backlog during a Sprint. The Sprint Backlog is a highly visible, real-time picture of the work that
+the Development Team plans to accomplish during the Sprint, and it belongs solely to the
+Development Team.</p>
+</div>
+<div class="sect3">
+<h4 id="_monitoring_sprint_progress">Monitoring Sprint Progress</h4>
+<div class="paragraph">
+<p>At any point in time in a Sprint, the total work remaining in the Sprint Backlog can be summed.
+The Development Team tracks this total work remaining at least for every Daily Scrum to project
+the likelihood of achieving the Sprint Goal. By tracking the remaining work throughout the
+Sprint, the Development Team can manage its progress.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_increment">Increment</h3>
+<div class="paragraph">
+<p>The Increment is the sum of all the Product Backlog items completed during a Sprint and the
+value of the increments of all previous Sprints. At the end of a Sprint, the new Increment must
+be “Done,” which means it must be in useable condition and meet the Scrum Team’s definition
+of “Done.” It must be in useable condition regardless of whether the Product Owner decides to
+actually release it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_artifact_transparency">Artifact  Transparency</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scrum relies on transparency. Decisions to optimize value and control risk are made based on
+the perceived state of the artifacts. To the extent that transparency is complete, these decisions
+have a sound basis. To the extent that the artifacts are incompletely transparent, these
+decisions can be flawed, value may diminish and risk may increase.</p>
+</div>
+<div class="paragraph">
+<p>The Scrum Master must work with the Product Owner, Development Team, and other involved
+parties to understand if the artifacts are completely transparent. There are practices for coping
+with incomplete transparency; the Scrum Master must help everyone apply the most
+appropriate practices in the absence of complete transparency. A Scrum Master can detect
+incomplete transparency by inspecting the artifacts, sensing patterns, listening closely to what is
+being said, and detecting differences between expected and real results.</p>
+</div>
+<div class="paragraph">
+<p>The Scrum Master’s job is to work with the Scrum Team and the organization to increase the
+transparency of the artifacts. This work usually involves learning, convincing, and change.
+Transparency doesn’t occur overnight, but is a path.</p>
+</div>
+<div class="sect2">
+<h3 id="_definition_of_done">Definition of “Done”</h3>
+<div class="paragraph">
+<p>When a Product Backlog item or an Increment is described as “Done”, everyone must
+understand what “Done” means. Although this varies significantly per Scrum Team, members
+must have a shared understanding of what it means for work to be complete, to ensure
+transparency. This is the definition of “Done” for the Scrum Team and is used to assess when
+work is complete on the product Increment.</p>
+</div>
+<div class="paragraph">
+<p>The same definition guides the Development Team in knowing how many Product Backlog items
+it can select during a Sprint Planning. The purpose of each Sprint is to deliver Increments of
+potentially releasable functionality that adhere to the Scrum Team’s current definition of
+“Done.”</p>
+</div>
+<div class="paragraph">
+<p>Development Teams deliver an Increment of product functionality every Sprint. This Increment
+is useable, so a Product Owner may choose to immediately release it. If the definition of "done"
+for an increment <strong>is</strong> part of the conventions, standards or guidelines of the development
+organization, all Scrum Teams must follow it as a minimum. If "done" for an increment is <strong>not</strong> a
+convention of the development organization, the Development Team of the Scrum Team must
+define a definition of “done” appropriate for the product. If there are multiple Scrum Teams
+working on the system or product release, the development teams on all of the Scrum Teams
+must mutually define the definition of “Done.”</p>
+</div>
+<div class="paragraph">
+<p>Each Increment is additive to all prior Increments and thoroughly tested, ensuring that all
+Increments work together.</p>
+</div>
+<div class="paragraph">
+<p>As Scrum Teams mature, it is expected that their definitions of “Done” will expand to include
+more stringent criteria for higher quality. Any one product or system should have a definition of
+“Done” that is a standard for any work done on it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_end_note">End Note</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Scrum is free and offered in this Guide. Scrum’s roles, artifacts, events, and rules are immutable
+and although implementing only parts of Scrum is possible, the result is not Scrum. Scrum exists
+only in its entirety and functions well as a container for other techniques, methodologies, and
+practices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_acknowledgements">Acknowledgements</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_people">People</h3>
+<div class="paragraph">
+<p>Of the thousands of people who have contributed to Scrum, we should single out those who
+were instrumental in its first ten years. First there was Jeff Sutherland working with Jeff
+McKenna, and Ken Schwaber working with Mike Smith and Chris Martin. Many others
+contributed in the ensuing years and without their help Scrum would not be refined as it is
+today.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_history">History</h3>
+<div class="paragraph">
+<p>Ken Schwaber and Jeff Sutherland first co-presented Scrum at the OOPSLA conference in 1995.
+This presentation essentially documented the learning that Ken and Jeff gained over the
+previous few years applying Scrum.</p>
+</div>
+<div class="paragraph">
+<p>The history of Scrum is already considered long. To honor the first places where it was tried and
+refined, we recognize Individual, Inc., Fidelity Investments, and IDX (now GE Medical).</p>
+</div>
+<div class="paragraph">
+<p>The Scrum Guide documents Scrum as developed and sustained for 20-plus years by Jeff
+Sutherland and Ken Schwaber. Other sources provide you with patterns, processes, and insights
+that complement the Scrum framework. These optimize productivity, value, creativity, and
+pride.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 2016-with-fixes<br>
+Last updated 2017-04-11 18:50:50 UTC
+</div>
+</div>
+</body>
+</html>
